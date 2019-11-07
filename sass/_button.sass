@@ -1,0 +1,38 @@
+.button
+  padding: 10px 28px
+  background-color: transparent
+  border: 0
+  font-size: 12px
+  line-height: 15px
+  text-decoration: none
+  &--theme-transparent
+    border: 1px solid #ffffff
+    border-radius: 4px
+    color: #ffffff
+  &__day-news
+    display: inline-block
+    transition: all .3s
+    &:hover
+      background-color: #2E4EA4
+      border-color: #2E4EA4
+  &__visually-impaired
+    color: #fff
+    padding: 10px 5px 10px 35px
+    line-height: 16px
+    position: relative
+    border-radius: 4px
+    transition: background-color .3s
+    &:before
+      content: ''
+      width: 22px
+      height: 17px
+      position: absolute
+      top: 9px
+      left: 5px
+      background-image: url(../img/icon-eye.svg)
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+    &:hover
+      background-color: #2E4EA4
+

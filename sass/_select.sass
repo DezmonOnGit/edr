@@ -1,0 +1,78 @@
+.select
+    width: 160px
+    padding: 10px 27px 10px 10px
+    position: relative
+    cursor: pointer
+    &.jq-selectbox
+        padding: 0
+        .jq-selectbox__select
+            padding: 10px 27px 10px 10px
+    .jq-selectbox__dropdown
+        width: 100%
+    &:after
+        content: ''
+        width: 17px
+        height: 17px
+        position: absolute
+        top: 8px
+        right: 0
+        background-image: url(../img/icon-arrow.svg)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+    &__regions,
+    &__regions.jq-selectbox .jq-selectbox__select
+        padding-left: 35px
+        font-size: 12px
+        line-height: 15px
+        &:before
+            content: ''
+            width: 17px
+            height: 17px
+            background-image: url(../img/icon-mark.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            position: absolute
+            top: 8px
+            left: 5px
+    &--theme-transparent
+        color: #ffffff
+        border: 1px solid transparent
+        border-radius: 4px
+        transition: all .3s
+        &:hover
+            border-color: #fff
+        .jq-selectbox__dropdown
+            color: #2E4EA4
+    &--theme-transparent.opened
+        background-color: rgba(255,255,255,0.5)
+        color: #2E4EA4
+        border-radius: 4px 4px 0 0
+        border-color: #fff
+        border-bottom-color: transparent
+        .jq-selectbox__dropdown
+            left: -1px
+            width: calc(100% + 2px)
+            background-color: rgba(255,255,255,0.5)
+            border-bottom: 1px solid #fff
+            border-left: 1px solid #fff
+            border-right: 1px solid #fff
+            border-radius: 0 0 4px 4px
+            margin-top: 1px
+            li
+                padding: 10px 27px
+                transition: background-color .3s, color .3s
+                &:hover
+                    background-color: #2A2C34
+                    color: #ffffff
+
+
+
+
+.jq-selectbox
+    .select
+        display: none
+
+
+    

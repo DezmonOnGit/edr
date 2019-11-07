@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/slider-main.css">
+    <link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header header--fixed">
+            <div class="container">
+                <div class="header__top">
+                    <select class="select select__regions select--theme-transparent" data-placeholder="Выбрать регион">
+                        <option class="default" value=""></option>
+                        <option value="1">Регион-1</option>
+                        <option value="2">Регион-2</option>
+                        <option value="3">Регион-3</option>
+                    </select>
+                    <a href="#" class="button button__visually-impaired header__button-visually-impaired">Версия для слабовидящих</a>
+                </div>
+                <div class="header__middle"></div>
+                <div class="header__bottom"></div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="slider slider__main">
+                <div class="slider__item" style="background-image: url(img/slider-item-1.jpg);">
+                    <div class="container">
+                        <a class="button button--theme-transparent button__day-news slider__button-day-news" href="#">Новость дня</a>
+                        <div class="slider__title">Дмитрий Медведев: «Единая Россия» — это единая команда</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
