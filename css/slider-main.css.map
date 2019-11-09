@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACE,aAAO;EACL,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,2BAAa;IACX,WAAW,EAAE,KAAK;IAClB,cAAc,EAAE,KAAK",
+"mappings": "AACE,aAAO,CACL,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,2BAAa,CACX,WAAW,CAAE,KAAK,CAClB,cAAc,CAAE,KAAK",
 "sources": ["../sass/slider-main.sass"],
 "names": [],
 "file": "slider-main.css"

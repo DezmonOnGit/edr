@@ -1,0 +1,26 @@
+.search
+    width: 100%
+    background-color: transparent
+    border: 0
+    border-radius: 4px
+    padding: 15px 25px 15px 64px
+    &-box
+        position: relative
+        &:after
+            content: ""
+            position: absolute
+            width: 17px
+            height: 17px
+            top: 13px
+            left: 57px
+            background-image: url(../img/icon-search.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+    &::placeholder
+        color: #dfe0e3
+    &--theme-transparent
+        background-color: rgba(255,255,255,.5)
+        color: #dfe0e3
+    &:focus
+        outline: 0

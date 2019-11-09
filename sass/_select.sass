@@ -38,28 +38,22 @@
             left: 5px
     &--theme-transparent
         color: #ffffff
-        border: 1px solid transparent
         border-radius: 4px
         transition: all .3s
         &:hover
-            border-color: #fff
+            background-color: #2E4EA4
         .jq-selectbox__dropdown
-            color: #2E4EA4
+            color: #fff
     &--theme-transparent.opened
         background-color: rgba(255,255,255,0.5)
-        color: #2E4EA4
+        background-color: #2E4EA4
         border-radius: 4px 4px 0 0
-        border-color: #fff
         border-bottom-color: transparent
         .jq-selectbox__dropdown
             left: -1px
             width: calc(100% + 2px)
-            background-color: rgba(255,255,255,0.5)
-            border-bottom: 1px solid #fff
-            border-left: 1px solid #fff
-            border-right: 1px solid #fff
+            background-color: #2E4EA4
             border-radius: 0 0 4px 4px
-            margin-top: 1px
             li
                 padding: 10px 27px
                 transition: background-color .3s, color .3s
@@ -67,12 +61,6 @@
                     background-color: #2A2C34
                     color: #ffffff
 
-
-
-
 .jq-selectbox
     .select
         display: none
-
-
-    

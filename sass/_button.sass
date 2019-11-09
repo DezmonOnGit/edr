@@ -1,14 +1,41 @@
 .button
-  padding: 10px 28px
+  padding: 13px 37px
   background-color: transparent
   border: 0
-  font-size: 12px
-  line-height: 15px
+  font-size: 16px
+  line-height: 20px
+  font-family: "Roboto","Arial",sans-serif
+  font-weight: 700
   text-decoration: none
+  border-radius: 4px
+  text-align: center
+  cursor: pointer
+  &:active,
+  &:focus
+    outline: 0
+  &--small-text
+    font-size: 12px
+    line-height: 15px
   &--theme-transparent
+    padding: 10px 28px
     border: 1px solid #ffffff
     border-radius: 4px
     color: #ffffff
+  &--theme-day
+    border-color: rgba(46, 78, 164, 0.2)
+    background-color: #ffffff
+    color: #2E4EA4
+    transition: color .3s, background-color .3s
+    &:hover
+      background-color: #f9f9f9
+    &:active
+      background-color: #d4d5d6
+      border-color: #d4d5d6
+  &--border-none
+    border: 0
+    &:hover,
+    &:active
+      border: 0
   &__day-news
     display: inline-block
     transition: all .3s
@@ -18,6 +45,7 @@
   &__visually-impaired
     color: #fff
     padding: 10px 5px 10px 35px
+    font-weight: 400
     line-height: 16px
     position: relative
     border-radius: 4px
