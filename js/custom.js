@@ -7,42 +7,55 @@ $(function () {
     //menu
     if($('.js-menu-header').length) {
 
-        $(document).on('click', '.menu__link', function (e) {
-            var curLink = $(this);
-            var linkBox = curLink.closest('.menu__item');
-            var curSubmenu = linkBox.find('.menu__item-submenu');
-            if(curSubmenu.length) {
+        //при загрузке страницы
+        initHeaderMenu();
 
-                e.preventDefault();
-                var header = curLink.closest('.header');
-
-                if (!linkBox.hasClass('opened')) {
-                    checkOpenedMenuItems(linkBox, function () {
-                        linkBox.addClass('opened');
-                        header.addClass('header--menu-opened');
-                        curSubmenu.slideDown();
-                    });
-                } else {
-                    linkBox.removeClass('opened');
-                    header.removeClass('header--menu-opened');
-                    curSubmenu.slideUp();
-                }
-            }
-        });
+        // $(document).on('mouseover', '.menu__item', function () {
+        //     var linkBox = $(this);
+        //     var curSubmenu = linkBox.find('.menu__item-submenu');
+        //     var header = linkBox.closest('.header');
+        //     var meniItems = header.find('.menu__item');
+        //
+        //     if(curSubmenu.length) {
+        //         if (!linkBox.hasClass('opened')) {
+        //             meniItems.removeClass('opened');
+        //             linkBox.addClass('opened');
+        //             header.addClass('header--menu-opened');
+        //         }
+        //     }
+        // });
+        //
+        // $(document).on('mouseout', '.menu__item', function (e) {
+        //     var curElement = $(e.target);
+        //     var openedMenuItem = $('.menu__item.opened');
+        //     var header = $('.header');
+        //
+        //     if(openedMenuItem.length) {
+        //         console.log(!openedMenuItem.has(curElement))
+        //         if (curElement.hasClass('opened') || openedMenuItem.has(curElement)) {
+        //
+        //             openedMenuItem.removeClass('opened');
+        //             header.removeClass('header--menu-opened');
+        //
+        //         }
+        //     }
+        // });
     }
 });
 
-function  checkOpenedMenuItems(curItem, callback) {
-    var items = curItem.siblings('.menu__item');
 
-    items.each(function (index, item) {
-        if($(item).hasClass('opened')) {
-            $(item).removeClass('opened');
-            $(item).find('.menu__item-submenu').slideUp();
-        }
+function initHeaderMenu() {
+
+    setSubmenuOffsets($('.menu__item'));
+
+}
+
+function setSubmenuOffsets(menuItem) {
+    var header = menuItem.closest('.header');
+    var curSubmenu = menuItem.find('.menu__item-submenu');
+    var offsetTop = header.innerHeight();
+
+    curSubmenu.css({
+        paddingTop: offsetTop,
     });
-
-    if(typeof callback !== 'undefined') {
-        callback();
-    }
 }

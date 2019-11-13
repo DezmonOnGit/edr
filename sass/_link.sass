@@ -4,21 +4,23 @@
     color: #2E4EA4
     text-decoration: none
     position: relative
-    &:after
-        content: ''
-        width: 100%
-        height: 1px
-        background-color: #2E4EA4
-        position: absolute
-        bottom: 0
-        left: 0
-        transform: scale(0,1)
-        transition: all .3s
-    &:hover
-        &:after
-            transform: scale(1,1)
-    &--theme-transparent
-        color: #fff
-        &:after
-            background-color: #fff
+
+.link:after
+    content: ''
+    width: 100%
+    height: 1px
+    background-color: #2E4EA4
+    position: absolute
+    bottom: 0
+    left: 0
+    transform: scale(0,1)
+    transition: all .3s
+
+.link:hover:after
+    transform: scale(1,1)
+
+.link--theme-transparent
+    color: #fff
+.link--theme-transparent:after
+    background-color: #fff
                 

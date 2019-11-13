@@ -3,64 +3,75 @@
     padding: 10px 27px 10px 10px
     position: relative
     cursor: pointer
-    &.jq-selectbox
-        padding: 0
-        .jq-selectbox__select
-            padding: 10px 27px 10px 10px
-    .jq-selectbox__dropdown
-        width: 100%
-    &:after
-        content: ''
-        width: 17px
-        height: 17px
-        position: absolute
-        top: 8px
-        right: 0
-        background-image: url(../img/icon-arrow.svg)
-        background-repeat: no-repeat
-        background-size: contain
-        background-position: center
-    &__regions,
-    &__regions.jq-selectbox .jq-selectbox__select
-        padding-left: 35px
-        font-size: 12px
-        line-height: 15px
-        &:before
-            content: ''
-            width: 17px
-            height: 17px
-            background-image: url(../img/icon-mark.svg)
-            background-repeat: no-repeat
-            background-size: contain
-            background-position: center
-            position: absolute
-            top: 8px
-            left: 5px
-    &--theme-transparent
-        color: #ffffff
-        border-radius: 4px
-        transition: all .3s
-        &:hover
-            background-color: #2E4EA4
-        .jq-selectbox__dropdown
-            color: #fff
-    &--theme-transparent.opened
-        background-color: rgba(255,255,255,0.5)
-        background-color: #2E4EA4
-        border-radius: 4px 4px 0 0
-        border-bottom-color: transparent
-        .jq-selectbox__dropdown
-            left: -1px
-            width: calc(100% + 2px)
-            background-color: #2E4EA4
-            border-radius: 0 0 4px 4px
-            li
-                padding: 10px 27px
-                transition: background-color .3s, color .3s
-                &:hover
-                    background-color: #2A2C34
-                    color: #ffffff
 
-.jq-selectbox
-    .select
-        display: none
+.select .jq-selectbox
+    padding: 0
+
+.select .jq-selectbox .jq-selectbox__select
+    padding: 10px 27px 10px 10px
+
+.jq-selectbox__dropdown
+    width: 100%
+
+.select:after
+    content: ''
+    width: 17px
+    height: 17px
+    position: absolute
+    top: 8px
+    right: 0
+    background-image: url(../img/icon-arrow.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+.select__regions
+    padding-left: 35px
+    font-size: 12px
+    line-height: 15px
+
+.select__regions:before
+    content: ''
+    width: 17px
+    height: 17px
+    background-image: url(../img/icon-mark.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    position: absolute
+    top: 8px
+    left: 5px
+
+.select--theme-transparent
+    color: #ffffff
+    border-radius: 4px
+    transition: all .3s
+
+.select--theme-transparent:hover
+    background-color: #2E4EA4
+
+.select--theme-transparent .jq-selectbox__dropdown
+    color: #fff
+
+.select--theme-transparent.opened
+    background-color: rgba(255,255,255,0.5)
+    background-color: #2E4EA4
+    border-radius: 4px 4px 0 0
+    border-bottom-color: transparent
+
+.select--theme-transparent.opened .jq-selectbox__dropdown
+    left: -1px
+    width: calc(100% + 2px)
+    background-color: #2E4EA4
+    border-radius: 0 0 4px 4px
+
+.select--theme-transparent.opened .jq-selectbox__dropdown li
+    padding: 10px 27px
+    transition: background-color .3s, color .3s
+
+.select--theme-transparent.opened .jq-selectbox__dropdown li:hover
+    background-color: #2A2C34
+    color: #ffffff
+
+.jq-selectbox .select
+    display: none
