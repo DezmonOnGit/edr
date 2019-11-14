@@ -10,6 +10,29 @@ $(function () {
         //при загрузке страницы
         initHeaderMenu();
 
+        $(document).on('mouseover', '.header', function (evt) {
+            var evtTarget = $(evt.target);
+            var evtTargetWrapper = evtTarget.closest('.menu__item-inner');
+            var evtTargetHeader = evtTarget.closest('.header');
+            var headerMenuItems = evtTargetHeader.find('.menu__item-inner');
+
+            if(evtTarget.hasClass('menu__item-inner') && evtTargetWrapper.find('.menu__item-submenu').length) {
+                if(!evtTarget.hasClass('opened')) {
+                    headerMenuItems.removeClass('opened');
+                    evtTargetWrapper.addClass('opened');
+                }
+            }
+        });
+
+        $(document).on('mouseout', '.header', function (evt) {
+            var header = $(evt.currentTarget);
+            var openedMenuItem = header.find('.menu__item-inner.opened');
+
+            if(openedMenuItem.length) {
+                openedMenuItem.removeClass('opened');
+            }
+        });
+
         // $(document).on('mouseover', '.menu__item', function () {
         //     var linkBox = $(this);
         //     var curSubmenu = linkBox.find('.menu__item-submenu');
