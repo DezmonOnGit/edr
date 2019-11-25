@@ -1,12 +1,87 @@
+.slider__main
+    width: 100%
+    height: 100%
+    min-height: 100vh
 .slider__title
     max-width: 540px
     font-family: 'Merriweather', 'Arial', sans-serif
     font-size: 48px
     line-height: 160%
     color: #ffffff
+
 .slider__button-day-news
     margin-bottom: 30px
+
 .slider__item
     background-size: cover
     background-position: center
     background-repeat: no-repeat
+
+.slider__main .slider__item
+    padding-top: 408px
+    padding-bottom: 195px
+    min-height: 100vh
+
+.slider .owl-nav
+    width: 100%
+    max-width: 104px
+    padding: 0 30px
+    margin: 0 auto
+    position: absolute
+    bottom: 100px
+    left: calc((100vw - 1230px) / 2)
+
+.slider .owl-dots
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+    width: 100%
+    max-width: 1126px
+    padding: 0 15px
+    position: absolute
+    bottom: 106px
+    right: calc((100vw - 1230px) / 2)
+
+.slider .owl-nav .arrow-next
+    transform: rotate(-180deg)
+
+.slider .owl-nav .arrow-next,
+.slider .owl-nav .arrow-prev
+    transition: all .5s
+
+.slider .owl-nav .arrow-next:hover
+    transform: scale(1.2, 1.2) rotate(-180deg)
+
+.slider .owl-nav .arrow-prev:hover
+    transform: scale(1.2, 1.2)
+
+.slider .owl-nav .owl-next.disabled,
+.slider .owl-nav .owl-prev.disabled
+    opacity: .5
+    pointer-events: none
+
+.slider .owl-nav .owl-prev
+    margin-right: 20px
+
+.owl-dot span
+    display: block
+    width: 4px
+    height: 4px
+    border-radius: 50%
+    background-color: #fff
+    opacity: .2
+    margin-right: 14px
+    transition: all .5s
+
+.owl-dot:last-child span
+    margin-right: 0
+
+.owl-dot.active span
+    opacity: 1
+    pointer-events: none
+
+.owl-dot:hover span
+    opacity: 1
+    transform: scale(1.3, 1.3)
+
+
