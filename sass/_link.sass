@@ -21,6 +21,54 @@
 
 .link--theme-transparent
     color: #fff
+
 .link--theme-transparent:after
     background-color: #fff
-                
+
+.link--theme-dark
+    color: #000000
+
+.link--theme-dark:after
+    background-color: #000
+
+.link--theme-white
+    color: #fff
+
+.link__bar
+    font-size: 16px
+    font-weight: 600
+
+.link--several-lines:hover:after
+    display: none
+
+.link--several-lines
+    display: inline
+    border-bottom: 1px solid transparent
+    transition: all .3s
+
+.link--several-lines:hover
+    border-bottom-color: #2E4EA4
+
+.link--several-lines.link--theme-dark:hover
+    border-bottom-color: #000
+
+.link--several-lines.link--theme-white:hover
+    border-bottom-color: #fff
+.link__tag
+    padding-left: 9px
+    position: relative
+    color: #2E4EA4
+    font-size: 12px
+    line-height: 15px
+    font-weight: bold
+    margin-right: 3px
+    margin-left: 3px
+
+.link__tag:before
+    content: '#'
+    position: absolute
+    top: 0
+    left: 0
+
+.link__tag--white
+    color: #ffffff

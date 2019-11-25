@@ -19,12 +19,15 @@ $(function () {
     //sliders
     if($('.owl-carousel').length) {
 
-        $('.owl-carousel').owlCarousel({
+        var sliderMainOptions = {
             items : 1,
             nav: true,
             smartSpeed: 700,
             navText: [makeSliderArrow('arrow-prev'),makeSliderArrow('arrow-next')],
-        });
+        };
+
+        $('.owl-carousel').owlCarousel(sliderMainOptions);
+
     }
 });
 
