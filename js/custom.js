@@ -26,7 +26,16 @@ $(function () {
             navText: [makeSliderArrow('arrow-prev'),makeSliderArrow('arrow-next')],
         };
 
-        $('.owl-carousel').owlCarousel(sliderMainOptions);
+        var sliderCardsOptions = {
+            items : 4,
+            nav: true,
+            smartSpeed: 700,
+            margin: 27,
+            navText: [makeSliderArrow('arrow-prev'),makeSliderArrow('arrow-next')],
+        };
+
+        $('.slider__main').owlCarousel(sliderMainOptions);
+        $('.slider__cards').owlCarousel(sliderCardsOptions);
 
     }
 });
