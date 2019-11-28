@@ -19,7 +19,7 @@ $(function () {
     //sliders
     if($('.owl-carousel').length) {
 
-        var sliderMainOptions = {
+        var sliderDefaultOptions = {
             items : 1,
             nav: true,
             smartSpeed: 700,
@@ -34,9 +34,10 @@ $(function () {
             navText: [makeSliderArrow('arrow-prev'),makeSliderArrow('arrow-next')],
         };
 
-        $('.slider__main').owlCarousel(sliderMainOptions);
+        $('.slider__main').owlCarousel(sliderDefaultOptions);
         $('.slider__cards').owlCarousel(sliderCardsOptions);
-
+        $('.slider__photo').owlCarousel(sliderDefaultOptions);
+        $('.slider__video').owlCarousel(sliderDefaultOptions);
     }
 });
 
