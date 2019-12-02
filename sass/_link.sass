@@ -54,6 +54,9 @@
 
 .link--several-lines.link--theme-white:hover
     border-bottom-color: #fff
+
+.link--several-lines.link--theme-transparent:hover
+    border-bottom-color: #fff
 .link__tag
     padding-left: 9px
     position: relative
@@ -72,3 +75,33 @@
 
 .link__tag--white
     color: #ffffff
+
+.link__icon
+    display: inline-block
+    width: 20px
+    height: 20px
+
+.link__icon svg
+    fill: #2E4EA4
+    transition: fill .3s
+
+.link__icon:hover svg
+    fill: #2F80ED
+
+.link__icon:hover:after
+    display: none
+
+.link__privacy-policy
+    opacity: .3
+    color: #E3E3E3
+    transition: all .3s
+
+.link__privacy-policy:hover
+    opacity: 1
+
+.link__privacy-policy:after
+    background-color: #E3E3E3
+
+.link__sites
+    display: inline-block
+    margin-top: auto

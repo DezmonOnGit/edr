@@ -1,0 +1,62 @@
+.input-box
+    margin-bottom: 18px
+
+.input__radio
+    display: none
+
+.input__label-radio
+    padding-left: 36px
+    position: relative
+    display: inline-block
+    min-height: 24px
+    padding-top: 5px
+    cursor: pointer
+
+.input__label-radio:after
+    content: ''
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    border: 2px solid #2E4EA4
+    position: absolute
+    top: 0
+    left: 2px
+
+.input__label-radio:before
+    content: ''
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background-color: #2E4EA4
+    position: absolute
+    top: 6px
+    left: 8px
+    transform: scale(0)
+    transition: transform .3s
+
+.input-box__radio--theme-day .input__label-radio:before
+    background-color: #BDBDBD
+
+.input-box__radio--theme-day .input__label-radio:after
+    border: 2px solid #BDBDBD
+
+.input-box__radio--theme-day .input__label-radio
+    color: #ffffff
+
+.input__radio:checked + .input__label-radio:before
+    transform: scale(1)
+
+.input__text
+    padding: 14px 20px
+    color: #dfe0e3
+    min-height: 46px
+    background-color: rgba(255,255,255,0.5)
+    border-radius: 2px
+    border: 0
+    box-shadow: none
+
+.input__text:focus
+    outline: 0
+
+.input__text::placeholder
+    color: #dfe0e3

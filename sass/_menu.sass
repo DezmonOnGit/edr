@@ -14,7 +14,6 @@
     z-index: 40
     transition: opacity .3s
 
-
 .menu__link:hover:after
     display: none
 
@@ -59,20 +58,13 @@
     max-width: 1200px
     margin: 0 auto 32px
 
-.menu__item-inner:hover .menu__item-submenu
+.menu__item-inner--hover-opener:hover .menu__item-submenu
     opacity: 1
     transform: scale(1,1)
 
 .menu__acco
     display: flex
     flex-wrap: wrap
-
-.acco__item
-    width: 50%
-    margin-bottom: 30px
-
-.acco__item:last-child
-    margin-bottom: 0
 
 .menu__submenu-banner
     width: 100%
@@ -85,3 +77,9 @@
 
 .menu__submenu-banner-box
     padding-left: 10%
+
+.menu__acco .acco__link
+    line-height: 1.6
+
+.menu__acco .acco__item
+    padding-right: 10px

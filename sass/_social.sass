@@ -1,0 +1,26 @@
+.social
+	display: flex
+	flex-wrap: wrap
+
+.social__item
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 48px
+	height: 48px
+	margin-right: 33px
+	border-radius: 50%
+	color: #ffffff
+	font-size: 26px
+	background-color: #2E4EA4
+	transition: background-color .3s
+
+.social__item:nth-child(4n+4)
+	margin-right: 0
+
+.social__item .icon-facebook
+	padding-top: 15px
+	font-size: 42px
+
+.social__item:hover
+	background-color: #2F80ED

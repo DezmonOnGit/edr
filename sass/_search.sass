@@ -29,3 +29,24 @@
 
 .search:focus
     outline: 0
+
+.search__opener
+    display: none
+    background-color: transparent
+    border: 0
+    box-shadow: none
+    width: 17px
+    height: 17px
+    position: relative
+
+.search__opener:after
+    content: ""
+    position: absolute
+    width: 17px
+    height: 17px
+    top: 0
+    left: 0
+    background-image: url(../img/icon-search.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center

@@ -1,5 +1,11 @@
-.select
+.select:not(.jq-selectbox)
     width: 160px
+    padding: 10px 27px 10px 10px
+    position: relative
+    cursor: pointer
+
+.select.jq-selectbox .jq-selectbox__select
+    width: 170px
     padding: 10px 27px 10px 10px
     position: relative
     cursor: pointer
@@ -13,24 +19,37 @@
 .jq-selectbox__dropdown
     width: 100%
 
-.select:after
+.select:not(.jq-selectbox):after
     content: ''
     width: 17px
     height: 17px
     position: absolute
     top: 8px
-    right: 0
+    right: 3px
     background-image: url(../img/icon-arrow.svg)
     background-repeat: no-repeat
     background-size: contain
     background-position: center
 
-.select__regions
+.select.jq-selectbox .jq-selectbox__select:after
+    content: ''
+    width: 17px
+    height: 17px
+    position: absolute
+    top: 9px
+    right: 7px
+    background-image: url(../img/icon-arrow.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+
+.select__regions:not(.jq-selectbox)
     padding-left: 35px
     font-size: 12px
     line-height: 15px
 
-.select__regions:before
+.select__regions:not(.jq-selectbox):before
     content: ''
     width: 17px
     height: 17px
@@ -41,6 +60,26 @@
     position: absolute
     top: 8px
     left: 5px
+
+.select__regions.jq-selectbox .jq-selectbox__select
+    padding-left: 35px
+    font-size: 12px
+    line-height: 15px
+
+.select__regions.jq-selectbox .jq-selectbox__select:before
+    content: ''
+    width: 17px
+    height: 17px
+    background-image: url(../img/icon-mark.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    position: absolute
+    top: 8px
+    left: 5px
+
+.jq-selectbox__dropdown li
+    font-size: 12px
 
 .select--theme-transparent
     color: #ffffff
@@ -60,8 +99,8 @@
     border-bottom-color: transparent
 
 .select--theme-transparent.opened .jq-selectbox__dropdown
-    left: -1px
-    width: calc(100% + 2px)
+    left: 0
+    width: 100%
     background-color: #2E4EA4
     border-radius: 0 0 4px 4px
 
